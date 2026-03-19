@@ -1,12 +1,17 @@
-#include <string>
-#include <iostream>
+#include "Test.hpp"
+#include "Fraction.hpp"
 
-
-struct Test
+/*class Test
 {
-	static const int size = 5;
-	int grade[size];
-	int a;
+ public:
+
+
+	 Test()
+	 {
+
+	 }
+
+	
 	void PrintSize(int num)
 	{
 		std::cout << num << "\n";
@@ -16,30 +21,30 @@ struct Test
 	{
 		this->a = a;
 	}
+	int GetA() const
+	{
+		return a;
+	}
 
 
+private:
+	static const int size = 5;
+	int grade[size];
+	int a;
 
-};
+
+};*/
 
 
 
 int main()
 {
 	
-
-	Test one;
-
-	Test* two = new Test;
-	
-
-	one.a = 10;
-    (*two).a = 20;
-
-	one.SetA(10);
-	(*two).PrintSize(20);
-
-
-
-
+	Fraction one(3, 10);
+	Fraction two(14, 15);
+	Fraction three = one.Sum(two);
+	std::cout << "One + Two = ";
+	three.Print();
+	std::cout << std::endl;
 	return 0;
 }
