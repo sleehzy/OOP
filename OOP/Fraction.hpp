@@ -12,16 +12,16 @@ public:
 	Fraction Multiply(const Fraction& other);
 	Fraction Divide(const Fraction& other);
 
-	
+	void Print()
+	{
+		std::cout << numerator << "/" << denominator;
+	}
 
 private:
 	int numerator;
 	int denominator;
 
-	void Print()
-	{
-		std::cout << numerator << "/" << denominator;
-	}
+	
 
 };
 
