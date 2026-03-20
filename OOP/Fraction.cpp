@@ -34,32 +34,32 @@ Fraction Fraction::Multiply(const Fraction& other)
 Fraction Fraction::Divide(const Fraction& other)
 {
 	
-	double newNumerator = numerator * other.denominator;
-	double newDenominator = denominator * other.numerator;
+	int newNumerator = numerator * other.denominator;
+	int newDenominator = denominator * other.numerator;
 
 	return Fraction(newNumerator, newDenominator);
 }
 
-void Fraction::Setnumerator(int one)
-{
-	if (numerator < 0)
-	{
-		std::cout << "„исло не должно быть нулЄм";
-		return;
-	}
-}
 
-void Fraction::Setdenominator(int two)
+
+
+void Fraction::redaction()
 {
-	if (numerator < 0)
+	if (denominator == 0)
 	{
-		std::cout << "„исло не должно быть нулЄм";
+		std::cout << "Denominator cant be zero";
 		return;
 	}
 
+	if (denominator < 0)
+	{
+		numerator = -numerator;
+		denominator = -denominator;
+	}
 
+	int commonDivisor = gcd(numerator, denominator);
+	numerator /= commonDivisor;
+	denominator / +commonDivisor;
 }
-
-
 
 

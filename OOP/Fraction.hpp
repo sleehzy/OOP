@@ -17,29 +17,42 @@ public:
 		std::cout << numerator << "/" << denominator;
 	}
 
-	void Setnumerator(int one);
 
-	void Setdenominator(int two);
 
-	int Getnumerator() const 
+	
+
+	int Getnumerator() const
 	{
 		return numerator;
 	}
 
-	int Getdenominator() const 
+	int Getdenominator() const
 	{
 		return denominator;
 	}
 
-private: 
+	void redaction();
+
+
+private:
 	int numerator;
 	int denominator;
 
-	
+	int gcd(int one, int two) const 
+	{
+		one = std::abs(one);
+		two = std::abs(two);
+		while(two != 0) 
+		{
+			int temp = two;
+			two = one % two;
+			one = temp;
+		}
+
+	}
+
 
 };
-
-
 
 
 #endif // !_FRACTION_HPP_
