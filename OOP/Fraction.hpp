@@ -17,7 +17,21 @@ public:
 		std::cout << numerator << "/" << denominator;
 	}
 
-private:
+	void Setnumerator(int one);
+
+	void Setdenominator(int two);
+
+	int Getnumerator() const 
+	{
+		return numerator;
+	}
+
+	int Getdenominator() const 
+	{
+		return denominator;
+	}
+
+private: 
 	int numerator;
 	int denominator;
 

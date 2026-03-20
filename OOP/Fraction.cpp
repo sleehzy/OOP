@@ -33,10 +33,33 @@ Fraction Fraction::Multiply(const Fraction& other)
 
 Fraction Fraction::Divide(const Fraction& other)
 {
-	int newNumerator = numerator / other.numerator;
-	int newDenominator = denominator / other.denominator;
+	
+	double newNumerator = numerator * other.denominator;
+	double newDenominator = denominator * other.numerator;
 
 	return Fraction(newNumerator, newDenominator);
 }
+
+void Fraction::Setnumerator(int one)
+{
+	if (numerator < 0)
+	{
+		std::cout << "„исло не должно быть нулЄм";
+		return;
+	}
+}
+
+void Fraction::Setdenominator(int two)
+{
+	if (numerator < 0)
+	{
+		std::cout << "„исло не должно быть нулЄм";
+		return;
+	}
+
+
+}
+
+
 
 
